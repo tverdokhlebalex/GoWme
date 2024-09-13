@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import * as Location from "expo-location";
 
-const MapScreen = () => {
-  const [location, setLocation] = useState(null);
+const MapScreen: React.FC = () => {
+  const [location, setLocation] = useState<Location.LocationObject | null>(
+    null
+  );
 
   useEffect(() => {
     (async () => {
